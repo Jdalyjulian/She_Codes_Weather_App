@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c5a34c394c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card bg-light mb-3" style="max-width: 36rem">
+        <div class="card-header">
+          <form id="search-city-form">
+            <input
+              class="search"
+              type="search"
+              placeholder="City Name"
+              name=""
+              id="search-city-input"
+            />
+            <input class="button" type="submit" value="Search" />
+            <span class="current" id="current">
+              <button>Current</button>
+            </span>
+          </form>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-7">
+              <i class="fa-solid fa-sun sun week-icon sunMain"></i>
+              <span class="mainTemperature" id="mainTemperature">23°C</span>
+            </div>
+            <div class="col-5">
+              <h2 class="card-title current-city">Austin</h2>
+              <h3 class="card-date" id="date">Day Time</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-7 condition" id="condition">Conditions</div>
+          </div>
+          <div class="row">
+            <div class="col-7 wind" id="wind">Wind</div>
+          </div>
+          <div class="row">
+            <div class="col-7 humidity" id="humidity">Humidity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
